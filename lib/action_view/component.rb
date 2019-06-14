@@ -1,6 +1,7 @@
 module ActionView
   class Component < ActionView::Base
     include ActiveModel::Validations
+    include Rails.application.routes.url_helpers
 
     delegate :render, to: :view_context
 
